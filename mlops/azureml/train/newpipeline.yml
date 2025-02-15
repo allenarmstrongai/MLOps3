@@ -12,10 +12,13 @@ inputs:
 outputs:
   train_data:
     type: uri_file  # Specify the type for train_data output
+    optional: true
   test_data:
     type: uri_file  # Specify the type for test_data output
+    optional: true
   model_info_output_path:
     type: uri_file  # Specify the type for model_info_output_path output
+    optional: true
 
 settings:
   default_datastore: azureml:workspaceblobstore
