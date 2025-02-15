@@ -39,8 +39,10 @@ jobs:
     inputs:
       raw_data: ${{parent.inputs.raw_data}}
     outputs:
-      train_data: ${{parent.outputs.train_data}}
-      test_data: ${{parent.outputs.test_data}}
+      train_data: 
+        type: uri_file
+      test_data:
+        type: uri_file
 
   sweep_step:
     name: Sweep
@@ -84,5 +86,6 @@ jobs:
       model_name: "used_cars_price_prediction_model"
       model_path: ${{parent.jobs.sweep_step.outputs.model_output}}
     outputs:
-      model_info_output_path: ${{parent.outputs.model_info_output_path}}
+      model_info_output_path:
+        type: uri_file
 
