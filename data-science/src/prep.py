@@ -51,7 +51,7 @@ if __name__ == "__main__":
     mlflow.start_run()
 
     # Parse Arguments
-    args = parser.parse_args()  # Call the function to parse arguments
+    args = parse_args()  # Call the function to parse arguments
 
     lines = [
         f"Raw data path: {args.raw_data}",  # Print the raw_data path
